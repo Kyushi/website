@@ -30,23 +30,30 @@ var controller = {
   init: function(){
     model.currentModal = model.modalFill[0];
     this.currentModal = model.currentModal;
+    this.imgList;
+    this.getImageList();
     view.init();
   },
   openImprint: function(){
     view.toggleModal();
   },
-  setRandomBG: function(){
+  getImageList: function(){
     $.ajax({
       url: '../php/photoloader.php',
       success: function(data){
-        var randInt = Math.floor(Math.random() * data.length);
-        var background = data[randInt];
-        $('body').css('background-image', 'url("./images/backgrounds/' + background + '")');
+        controller.imgList = data;
+        controller.setRandomBG(controller.imgList);
       },
       fail: function(){
-        $('body').css('background-image', 'url(".images/backgrounds/DSCF1478_copy.jpg")')
+        // In case loading imgs fails for some reason, use fallback img
+        this.imgList = ['DSCF1478_copy.jpg'];
       }
     })
+  },
+  setRandomBG: function(data){
+    var randInt = Math.floor(Math.random() * data.length);
+    var background = data[randInt];
+    $('body').css('background-image', 'url("./images/backgrounds/' + background + '")');
   }
 };
 
@@ -81,10 +88,13 @@ var view = {
         view.closeModalByEsc();
       }
       else if (e.keyCode == 66) {
-        controller.setRandomBG();
+        controller.setRandomBG(controller.imgList);
       }
     });
-    controller.setRandomBG();
+    $('body').on('swipe', function(e){
+      console.log('swiped');
+      controller.setRandomBG(controller.imgList);
+    });
   }
 };
 controller.init()
