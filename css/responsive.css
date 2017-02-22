@@ -26,12 +26,5 @@
     font-size: 36px;
     border: 0;
     background-color: #fff; } }
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-  color: #434443; }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #cb0000; }
-.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-  color: #cb0000;
-  background-color: #ffffff; }
 
 /*# sourceMappingURL=responsive.css.map */
