@@ -16,8 +16,6 @@
 /* make sure the button to close modal is big enough on (most) touch screens */
 @media screen and (max-width: 768px) {
   .close {
-    font-size: 36px;
-    border: 0;
-    background-color: #fff; } }
+    font-size: 18px; } }
 
 /*# sourceMappingURL=responsive.css.map */
