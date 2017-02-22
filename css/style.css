@@ -98,7 +98,8 @@ footer {
 
 #change-bg {
   font-size: 10px;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
 
 .footer-link {
   color: #fff;
