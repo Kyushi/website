@@ -1,0 +1,37 @@
+/* styling elements for max-width 500px */
+@media screen and (max-width: 500px) {
+  /* change header sizes on smaller screens */
+  h1,
+  .logo {
+    font-size: 25px; }
+
+  h2 {
+    font-size: 20px; }
+
+  h3 {
+    font-size: 15px; }
+
+  h5 {
+    font-size: 12px; }
+
+  .page-subtitle {
+    font-size: 15px; }
+
+  /* force showcase-item to full width under 450px */
+  .showcase-item {
+    width: 100%; } }
+/* make sure the button to close modal is big enough on (most) touch screens */
+@media screen and (max-width: 768px) {
+  .close {
+    font-size: 36px;
+    border: 0;
+    background-color: #fff; } }
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #434443; }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #cb0000; }
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #cb0000;
+  background-color: #ffffff; }
+
+/*# sourceMappingURL=responsive.css.map */
