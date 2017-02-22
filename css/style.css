@@ -75,7 +75,8 @@ footer {
   position: absolute;
   font-size: 15px;
   padding-bottom: 0.67em;
-  bottom: 0; }
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); }
 
 .social-link,
 .copyright,
@@ -95,13 +96,17 @@ footer {
 .copyright {
   text-align: center; }
 
+#change-bg {
+  font-size: 10px;
+  color: #fff; }
+
 .footer-link {
   color: #fff;
   text-decoration: none;
   font-size: 10px; }
 
 .footer-link:hover {
-  color: #434443; }
+  color: #a70000; }
 
 /* zocial */
 [class*="zocial-"]:before {

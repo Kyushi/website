@@ -91,10 +91,9 @@ var view = {
         controller.setRandomBG(controller.imgList);
       }
     });
-    $('body').on('swipe', function(e){
-      console.log('swiped');
+    $('#change-bg').on('click', function(){
       controller.setRandomBG(controller.imgList);
-    });
+    })
   }
 };
 controller.init()
