@@ -34,6 +34,19 @@ var controller = {
   },
   openImprint: function(){
     view.toggleModal();
+  },
+  setRandomBG: function(){
+    $.ajax({
+      url: '../php/photoloader.php',
+      success: function(data){
+        var randInt = Math.floor(Math.random() * data.length);
+        var background = data[randInt];
+        $('body').css('background-image', 'url("./images/backgrounds/' + background + '")');
+      },
+      fail: function(){
+        $('body').css('background-image', 'url(".images/backgrounds/DSCF1478_copy.jpg")')
+      }
+    })
   }
 };
 
@@ -67,7 +80,11 @@ var view = {
       if (e.keyCode == 27){
         view.closeModalByEsc();
       }
+      else if (e.keyCode == 66) {
+        controller.setRandomBG();
+      }
     });
+    controller.setRandomBG();
   }
 };
 controller.init()
