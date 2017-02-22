@@ -12,14 +12,7 @@
     font-size: 15px; }
 
   h5 {
-    font-size: 12px; }
-
-  .page-subtitle {
-    font-size: 15px; }
-
-  /* force showcase-item to full width under 450px */
-  .showcase-item {
-    width: 100%; } }
+    font-size: 12px; } }
 /* make sure the button to close modal is big enough on (most) touch screens */
 @media screen and (max-width: 768px) {
   .close {
