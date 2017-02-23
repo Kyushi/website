@@ -7,7 +7,7 @@
   $handle = @opendir('../' . $path . '/');
 
   while ($file = @readdir($handle))
-    ("." !== $file && ".." !== $file) && array_push($files, $file);
+    ("." !== $file && ".." !== $file && "." !== $file[0]) && array_push($files, $file);
   @closedir($handle);
 
   $files = json_encode($files);
